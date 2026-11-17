@@ -35,7 +35,8 @@ This set covers hub codes in a BST, double-scan checks with a hash map, fewest-h
 Each question has its own folder. Inside, you can find:
 
 - A Python file named after the question, such as `category_bst.py` or `route_palindrome.py`.
-- `output.txt`, which shows a sample run of the program.
+- `output.txt` and `output.png` – the console output of a run (the screenshot shows it as it appeared in PowerShell).
+- `README.md` with the question, how to run it and the output screenshot.
 - `flowchart.svg`, which shows the steps followed in the solution.
 
 Each set also has a `SET-NOTES.md` file with the complexity and data-structure notes.
