@@ -1,0 +1,21 @@
+Command: python gift_card_pairs.py
+
+Sorted order values: [199, 249, 299, 349, 499, 499, 599, 650, 750, 899, 999, 1001, 1250, 1350, 1499, 1501, 1751, 1801]
+
+Gift card Rs.2000: 6 pair(s)
+  199 + 1801 = 2000
+  249 + 1751 = 2000
+  499 + 1501 = 2000
+  650 + 1350 = 2000
+  750 + 1250 = 2000
+  999 + 1001 = 2000
+
+Gift card Rs.1000: 0 pair(s)
+
+Gift card Rs.3000: 1 pair(s)
+  1499 + 1501 = 3000
+
+Gift card Rs.50: 0 pair(s)
+
+Time O(n) after sorting (each step moves one pointer), space O(1).
+Checking every pair would be O(n^2).

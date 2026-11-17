@@ -1,0 +1,34 @@
+Command: python merge_office_lists.py
+
+Chennai office  : [('CLM1002', '2026-11-01'), ('CLM1007', '2026-11-03'), ('CLM1011', '2026-11-03'), ('CLM1020', '2026-11-08'), ('CLM1031', '2026-11-12')]
+Bengaluru office: [('CLM2001', '2026-11-02'), ('CLM2004', '2026-11-03'), ('CLM2010', '2026-11-09'), ('CLM2015', '2026-11-10'), ('CLM2022', '2026-11-14'), ('CLM2030', '2026-11-15')]
+
+Merged by claim date:
+  2026-11-01  CLM1002
+  2026-11-02  CLM2001
+  2026-11-03  CLM1007
+  2026-11-03  CLM1011
+  2026-11-03  CLM2004
+  2026-11-08  CLM1020
+  2026-11-09  CLM2010
+  2026-11-10  CLM2015
+  2026-11-12  CLM1031
+  2026-11-14  CLM2022
+  2026-11-15  CLM2030
+
+5 + 6 = 11 claims, merged in one pass: O(n + m) time.
+Calling sorted() on the joined list would be O((n + m) log(n + m)).
+
+
+Command: python test_merge_office_lists.py
+
+test_both_empty (__main__.TestMerge.test_both_empty) ... ok
+test_duplicates_are_kept (__main__.TestMerge.test_duplicates_are_kept) ... ok
+test_one_empty (__main__.TestMerge.test_one_empty) ... ok
+test_stable_on_ties (__main__.TestMerge.test_stable_on_ties) ... ok
+test_uneven_lengths (__main__.TestMerge.test_uneven_lengths) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK

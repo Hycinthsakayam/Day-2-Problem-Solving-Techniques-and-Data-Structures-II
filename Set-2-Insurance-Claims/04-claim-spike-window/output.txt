@@ -1,0 +1,27 @@
+Command: python claim_spike_window.py
+
+Claims per day (1-30 Nov):
+   1: 42   2: 55   3: 61   4: 48   5:120   6:104   7: 58   8: 66   9: 70  10:230
+  11:410  12:388  13:302  14:245  15:180  16:150  17: 98  18:131  19:112  20: 75
+  21: 64  22:101  23:140  24: 99  25: 60  26: 58  27: 47  28: 52  29: 49  30: 44
+
+Longest run above 100: 7 days, 10 Nov to 16 Nov
+Claims in that run: [230, 410, 388, 302, 245, 180, 150]  (total 1,905)
+
+The window grows while days stay above 100 and restarts after a quiet day.
+Each day is visited once -> O(n) time, O(1) space.
+
+
+Command: python test_claim_spike_window.py
+
+test_duplicate_values (__main__.TestClaimSpike.test_duplicate_values) ... ok
+test_empty_input (__main__.TestClaimSpike.test_empty_input) ... ok
+test_exactly_100_is_not_above (__main__.TestClaimSpike.test_exactly_100_is_not_above) ... ok
+test_first_of_equal_runs_is_kept (__main__.TestClaimSpike.test_first_of_equal_runs_is_kept) ... ok
+test_no_day_above_limit (__main__.TestClaimSpike.test_no_day_above_limit) ... ok
+test_whole_list (__main__.TestClaimSpike.test_whole_list) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK

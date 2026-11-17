@@ -1,0 +1,34 @@
+Command: python claim_bst.py
+
+insert CLM5040: added
+insert CLM2210: added
+insert CLM7788: added
+insert CLM1105: added
+insert CLM3302: added
+insert CLM6015: added
+insert CLM9001: added
+insert CLM2210: duplicate - ignored
+insert CLM4470: added
+
+Claims stored: 8
+Inorder  : ['CLM1105', 'CLM2210', 'CLM3302', 'CLM4470', 'CLM5040', 'CLM6015', 'CLM7788', 'CLM9001']
+Preorder : ['CLM5040', 'CLM2210', 'CLM1105', 'CLM3302', 'CLM4470', 'CLM7788', 'CLM6015', 'CLM9001']
+Postorder: ['CLM1105', 'CLM4470', 'CLM3302', 'CLM2210', 'CLM6015', 'CLM9001', 'CLM7788', 'CLM5040']
+search CLM3302: found
+search CLM8000: not found
+
+Inorder (left, node, right) visits keys from smallest to largest, so it lists claims in sorted order.
+Preorder is useful to copy the tree; postorder to delete it bottom-up.
+
+
+Command: python test_claim_bst.py
+
+test_duplicate_is_ignored (__main__.TestClaimBST.test_duplicate_is_ignored) ... ok
+test_empty_tree (__main__.TestClaimBST.test_empty_tree) ... ok
+test_inorder_is_sorted (__main__.TestClaimBST.test_inorder_is_sorted) ... ok
+test_traversal_orders (__main__.TestClaimBST.test_traversal_orders) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK

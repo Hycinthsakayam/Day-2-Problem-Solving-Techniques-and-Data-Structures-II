@@ -1,0 +1,28 @@
+Command: python hub_code_bst.py
+
+Insertion order: ['JAI', 'CCU', 'MAA', 'BOM', 'DEL', 'LKO', 'PNQ', 'AMD', 'BLR', 'COK', 'HYD', 'NAG']
+Height: 5  (best possible for 12 keys is 4)
+              PNQ
+                    NAG
+        MAA
+              LKO
+  JAI
+                    HYD
+              DEL
+                    COK
+        CCU
+              BOM
+                          BLR
+                    AMD
+search HYD: found at depth 4
+search NAG: found at depth 4
+search GOI: not found
+
+After inserting GOI, search GOI: depth 5
+
+Insertion in sorted order: ['AMD', 'BLR', 'BOM', 'CCU', 'COK', 'DEL', 'HYD', 'JAI', 'LKO', 'MAA', 'NAG', 'PNQ']
+Height: 12  - every node only has a right child, the tree is a linked list
+search NAG now needs 11 comparisons instead of 4
+
+Sorted input makes search O(n) instead of O(log n). Shuffle the input or use a self-balancing
+tree (AVL / red-black) to keep the height close to log2(n).

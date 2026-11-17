@@ -1,0 +1,27 @@
+Command: python approval_stages_graph.py
+
+Shortest path Registration -> Settlement: Registration -> Document Check -> Assessment -> Settlement  (3 steps)
+Shortest path Surveyor -> Closed: Surveyor -> Settlement -> Closed  (2 steps)
+Shortest path Settlement -> Registration: no path
+
+Loop in the normal flow: None
+Add rework edge Senior Review -> Assessment
+Loop found: Assessment -> Surveyor -> Senior Review -> Assessment
+
+BFS explores stage by stage, so the first time it reaches the goal is the fewest steps: O(V + E).
+DFS finds a loop when it reaches a stage that is still on the current path (a back edge): O(V + E).
+
+
+Command: python test_approval_stages_graph.py
+
+test_empty_graph (__main__.TestApprovalGraph.test_empty_graph) ... ok
+test_no_backward_path (__main__.TestApprovalGraph.test_no_backward_path) ... ok
+test_no_loop_in_normal_flow (__main__.TestApprovalGraph.test_no_loop_in_normal_flow) ... ok
+test_same_start_and_goal (__main__.TestApprovalGraph.test_same_start_and_goal) ... ok
+test_self_loop (__main__.TestApprovalGraph.test_self_loop) ... ok
+test_shortest_path_skips_surveyor (__main__.TestApprovalGraph.test_shortest_path_skips_surveyor) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK

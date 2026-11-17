@@ -1,0 +1,13 @@
+Command: python best_parcel_window.py
+
+Parcels per hour:
+  00:00  120  01:00   95  02:00   80  03:00   70  04:00   65  05:00   90
+  06:00  210  07:00  480  08:00  760  09:00  820  10:00  790  11:00  640
+  12:00  560  13:00  600  14:00  710  15:00  880  16:00  940  17:00  910
+  18:00  720  19:00  500  20:00  380  21:00  300  22:00  220  23:00  160
+
+Best 4-hour window: 15:00 - 19:00, average 862.5 parcels/hour ([880, 940, 910, 720])
+Second peak (morning) for comparison: (8, 752.5)
+
+The window total is updated by adding the new hour and removing the oldest: O(n) time, O(1) space,
+instead of re-adding 4 values for every start hour.

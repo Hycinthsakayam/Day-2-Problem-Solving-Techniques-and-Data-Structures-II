@@ -1,0 +1,19 @@
+Command: python sku_hash_table.py
+
+Small table with 7 buckets
+  put SKU-1001 (Bluetooth Speaker) -> bucket 0
+  put SKU-1002 (USB-C Charger    ) -> bucket 1
+  put SKU-1003 (Wireless Mouse   ) -> bucket 2
+  put SKU-1004 (Basmati Rice     ) -> bucket 3
+  put SKU-1005 (Cold Pressed Oil ) -> bucket 4
+  put SKU-1006 (Mixer Grinder    ) -> bucket 5
+  put SKU-1007 (Non-stick Tawa   ) -> bucket 6
+  put SKU-1008 (Running Shoes    ) -> bucket 0
+Collision: bucket 0 holds ['SKU-1001', 'SKU-1008'] as a chain
+get SKU-1008 -> Running Shoes (found by walking the chain)
+
+100,000 SKU look-ups
+  own chained hash table: 0.2881 s  (found 100,000, longest chain 3)
+  built-in dict         : 0.0781 s  (found 100,000)
+  dict is about 4x faster (C implementation, open addressing)
+Both are O(1) on average; chaining degrades to O(n) only if many keys hash to one bucket.

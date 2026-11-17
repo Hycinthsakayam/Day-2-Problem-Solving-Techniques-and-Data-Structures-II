@@ -1,0 +1,12 @@
+Command: python route_palindrome.py
+
+'MAA-BLR-HYD-BLR-MAA'    hubs ['MAA', 'BLR', 'HYD', 'BLR', 'MAA']    hub palindrome: True  char palindrome: False
+'del > jai > Del'        hubs ['DEL', 'JAI', 'DEL']                  hub palindrome: True  char palindrome: False
+'BOM/PNQ/goi/pnq/bom'    hubs ['BOM', 'PNQ', 'GOI', 'PNQ', 'BOM']    hub palindrome: True  char palindrome: False
+'MAA-BLR-HYD-MAA'        hubs ['MAA', 'BLR', 'HYD', 'MAA']           hub palindrome: False char palindrome: False  (mismatch BLR vs HYD)
+'nag'                    hubs ['NAG']                                hub palindrome: True  char palindrome: False
+''                       hubs []                                     hub palindrome: True  char palindrome: True
+'MAA - AAM'              hubs ['MAA', 'AAM']                         hub palindrome: False char palindrome: True  (mismatch MAA vs AAM)
+
+Two pointers move from both ends towards the middle: O(n) time, O(1) extra space for the
+character check. 'MAA - AAM' is a palindrome by letters but not by hub codes.

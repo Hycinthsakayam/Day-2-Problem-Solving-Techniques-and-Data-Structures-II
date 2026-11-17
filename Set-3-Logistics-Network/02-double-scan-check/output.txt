@@ -1,0 +1,14 @@
+Command: python parcel_double_scans.py
+
+Tracking look-up:
+  TRK7001: [('MAA', '08:02'), ('BLR', '13:40'), ('BLR', '13:45')]
+  TRK7003: [('BOM', '09:10'), ('PNQ', '15:20')]
+  TRK9999: not found
+
+Parcels scanned more than once at the same hub:
+  TRK7002 at MAA: 2 scans at 08:05, 08:31
+  TRK7004 at DEL: 3 scans at 10:00, 10:02, 10:09
+  TRK7001 at BLR: 2 scans at 13:40, 13:45
+
+A dict gives O(1) average look-up by tracking number. The (tracking, hub) key finds repeat scans
+in a single pass: O(n) time and O(n) space for n scans.

@@ -1,0 +1,16 @@
+Command: python peak_traffic_window.py
+
+Minutes recorded: 1440   total requests: 1,225,633
+Hourly totals:
+  00h  24,025  01h  23,947  02h  23,813  03h  24,337
+  04h  24,162  05h  23,095  06h  24,682  07h  24,555
+  08h  22,950  09h  24,621  10h  28,077  11h  44,803
+  12h  70,503  13h  70,979  14h  45,129  15h  29,154
+  16h  28,662  17h  49,422  18h 103,741  19h 164,993
+  20h 166,044  21h 104,822  22h  50,558  23h  28,559
+
+Busiest 3-hour window: 18:31 - 21:31  with 452,817 requests (average 2,516 per minute, peak minute 3,063)
+Sliding window O(n)  : 0.140 ms
+Brute force O(n*k)   : 2.413 ms   same answer: True
+
+Size infrastructure for at least the peak-window average with headroom for the peak minute.

@@ -1,0 +1,21 @@
+Command: python deployment_order_graph.py
+
+Dependencies:
+  cart          needs ['pricing', 'inventory', 'auth']
+  pricing       needs ['inventory', 'catalogue']
+  inventory     needs ['catalogue']
+  checkout      needs ['cart', 'payment', 'auth']
+  payment       needs ['auth']
+  catalogue     needs -
+  auth          needs -
+  notification  needs ['checkout']
+  search        needs ['catalogue']
+
+Deployment order (DFS): auth -> catalogue -> inventory -> pricing -> cart -> payment -> checkout -> notification -> search
+Deployment order (BFS): auth -> catalogue -> payment -> inventory -> search -> pricing -> cart -> checkout -> notification
+
+Added dependency: catalogue needs pricing
+DFS result: circular dependency found: pricing -> inventory -> catalogue -> pricing
+BFS result: None (some services never become ready)
+
+Both run in O(V + E). DFS finds the exact loop; BFS shows that no complete order exists.

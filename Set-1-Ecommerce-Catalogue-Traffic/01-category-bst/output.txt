@@ -1,0 +1,19 @@
+Command: python category_bst.py
+
+Inserted 15 categories in this order:
+  Mobiles, Electronics, Toys, Books, Grocery, Shoes, Watches, Appliances, Fashion, Kitchen, Sports, Beauty, Furniture, Laptops, Pet Supplies
+
+Tree height: 5
+
+Inorder  : Appliances, Beauty, Books, Electronics, Fashion, Furniture, Grocery, Kitchen, Laptops, Mobiles, Pet Supplies, Shoes, Sports, Toys, Watches
+
+Preorder : Mobiles, Electronics, Books, Appliances, Beauty, Grocery, Fashion, Furniture, Kitchen, Laptops, Toys, Shoes, Pet Supplies, Sports, Watches
+
+Postorder: Beauty, Appliances, Books, Furniture, Fashion, Laptops, Kitchen, Grocery, Electronics, Pet Supplies, Sports, Shoes, Watches, Toys, Mobiles
+
+Search:
+  Kitchen  -> found after 4 comparisons
+  Laptops  -> found after 5 comparisons
+  Garden   -> not found after 5 comparisons
+
+Inorder gives the categories in alphabetical order, which is what the category menu needs.

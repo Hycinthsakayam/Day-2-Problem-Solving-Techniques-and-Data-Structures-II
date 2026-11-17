@@ -1,0 +1,30 @@
+Command: python hub_routes_bfs_dfs.py
+
+Adjacency list:
+  NAG -> DEL, BOM, HYD, CCU
+  DEL -> JAI, LKO, NAG
+  BOM -> AMD, PNQ, NAG
+  HYD -> BLR, MAA, NAG
+  CCU -> LKO, NAG
+  BLR -> MAA, COK
+  MAA -> BLR
+  JAI -> AMD
+  AMD -> BOM
+  PNQ -> BLR
+  LKO -> (none)
+  COK -> (none)
+  GOI -> PNQ
+
+Fewest hops JAI -> COK: JAI -> AMD -> BOM -> PNQ -> BLR -> COK  (5 hops)
+
+Fewest hops CCU -> MAA: CCU -> NAG -> HYD -> MAA  (3 hops)
+
+Fewest hops MAA -> DEL: no route
+
+Fewest hops LKO -> MAA: no route
+
+Reachable from central depot NAG (DFS order): NAG, DEL, JAI, AMD, BOM, PNQ, BLR, MAA, COK, LKO, HYD, CCU
+Not reachable: ['GOI']
+
+BFS gives the fewest hops because it explores all 1-hop hubs, then 2-hop hubs, and so on. DFS lists
+every hub connected to the depot. Both are O(V + E) on an adjacency list.
